@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/resources/css/ext-all.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/ext-all-dev.js"></script>
+    <script type="text/javascript" >
+
+        Ext.onReady(function () {
+
+            console.log("ca va");
+
+            Ext.create("Ext.panel.Panel", {
+                renderTo: Ext.getBody(),
+                title: "Panel with a toolbar",
+                html : "This is an example to use a toolbar",
+                dockedItems: [ //here
+                    {
+                        xtype: "toolbar",
+                        dock: "bottom",
+                        items: [
+                            {
+                                xtype: "tbtext",
+                                text: "Item: 19"
+                            },
+                            "-", //{xtype:"tbseparator"}
+                            {
+                                xtype: "tbtext",
+                                text: "English (United States)"
+                            },
+                            " ", //{xtype:"tbspacer"}
+                            {
+                                xtype : "combo",
+                                fieldLabel : "Go to",
+                                labelAlign : "right",
+                            },
+                            "➤", //{xtype:"tbfill"}
+                            {
+                                text: "Print",
+                            },
+                            " ",
+                            {
+                                text: "Outline",
+                            }
+                        ]
+                    }
+                ]
+            });
+
+        });
+    </script>
+
+    <title>Menu</title>
+</head>
+<body>
+
+</body>
+</html>

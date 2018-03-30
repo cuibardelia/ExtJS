@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/resources/css/ext-all.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/ext-all-dev.js"></script>
+    <script type="text/javascript" >
+
+        Ext.onReady(function () {
+
+            console.log("ca va");
+
+
+            var win = Ext.create("Ext.window.Window", {
+                title: "Find and Replace",
+                modal: true, //here
+                items: [
+                    {
+                        xtype: "textfield",
+                        fieldLabel: "Find what"
+                    }
+                ],
+                buttons: [
+                    {
+                        text: "Find next"
+                    },
+                    {
+                        text: "Cancel"
+                    }
+                ]
+            });
+            win.show();
+
+        });
+    </script>
+
+    <title>Window</title>
+</head>
+<body>
+
+</body>
+</html>

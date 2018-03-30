@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/resources/css/ext-all.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/ext-all-dev.js"></script>
+    <script type="text/javascript" >
+        console.log("ca va");
+        Ext.define("DuraSoft.tech.extjs4.Book", {
+            config: {
+                title: "",
+                price: 5,
+                authors: []
+            },
+            constructor: function (cfg) {
+                this.initConfig(cfg);
+            },
+            applyPrice: function (priceVal) {
+                if (priceVal < 5)
+                    console.log("APPLY: Invalid value for price " + priceVal);
+                else
+                    this.price = priceVal;
+                return this.price;
+            }
+        });
+
+        var xml = Ext.create("DuraSoft.tech.extjs4.Book",{
+            title : "XML", authors : ["Sam","Kim"]
+        });
+
+        xml.setPrice(3);
+        console.log(xml.getPrice());
+        xml.applyPrice(30);
+        console.log(xml.getPrice());
+    </script>
+
+    <title>OOP-APPLY</title>
+</head>
+<body>
+
+</body>
+</html>
